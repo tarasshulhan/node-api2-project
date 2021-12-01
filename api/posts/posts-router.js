@@ -40,11 +40,11 @@ router.get('/:id', (req, res) => {
     }else{
         Post.insert(req.body) 
         .then(post => {
-            let newPost 
-            Post.findById(post).then(post =>{
-                newPost = post
-            })
-            res.status(201).json(newPost)
+            // let newPost 
+            // Post.findById(post).then(post =>{
+            //     newPost = post
+            // })
+            res.status(201).json(post)
         })
         .catch(error => {
             console.log(error);
